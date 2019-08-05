@@ -1,5 +1,4 @@
-/* global graphql */
-
+import { graphql } from 'gatsby';
 import React from 'react';
 import Helmet from 'react-helmet';
 import HomepageIssue from '../components/homepage_issue';
@@ -20,7 +19,7 @@ const IndexPage = ({ data }) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query IndexQuery {
+  query {
     allDataJson {
       edges {
         node {

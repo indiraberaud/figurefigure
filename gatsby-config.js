@@ -6,8 +6,8 @@ module.exports = {
     title: 'Figure Figure',
   },
   plugins: [
-    'gatsby-plugin-react-next',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-layout',
     'svgo',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -18,7 +18,7 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-postcss-sass',
+      resolve: 'gatsby-plugin-sass',
       options: {
         postCssPlugins: [
           pixrem(),

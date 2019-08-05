@@ -1,50 +1,44 @@
-"use strict";
+'use strict';
 
-exports.modifyWebpackConfig = function (_ref, options) {
-  var config = _ref.config, stage = _ref.stage;
+exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
+  // const config = _ref.config, stage = _ref.stage;
 
-  var svgFiles = /\.icon$/;
-  var svgLoader = `svg-sprite-loader`;
+  const svgFiles = /\.icon$/;
+  const svgLoader = 'svg-sprite-loader';
 
   switch (stage) {
-    case `develop`:
-      {
-        config.loader(`svg-sprite`, {
-          test: svgFiles,
-          loaders: [`svg-sprite-loader`]
-        });
+    case 'develop': {
+      actions.setWebpackConfig({
+        module: { rules: [{ test: svgFiles, use: [svgLoader] }] },
+      });
+      break;
+    }
 
-        return config;
-      }
-    case `build-css`:
-      {
-        config.loader(`svg-sprite`, {
-          test: svgFiles,
-          loaders: [`svg-sprite-loader`]
-        });
+    case 'build-css': {
+      actions.setWebpackConfig({
+        module: { rules: [{ test: svgFiles, use: [svgLoader] }] },
+      });
+      break;
+    }
 
-        return config;
-      }
-    case `develop-html`:
-    case `build-html`:
-      {
-        config.loader(`svg-sprite`, {
-          test: svgFiles,
-          loaders: [`svg-sprite-loader`]
-        });
-        return config;
-      }
-    case `build-javascript`:
-      {
-        config.loader(`svg-sprite`, {
-          test: svgFiles,
-          loaders: [`svg-sprite-loader`]
-        });
-        return config;
-      }
+    case 'develop-html':
+    case 'build-html':
+    {
+      actions.setWebpackConfig({
+        module: { rules: [{ test: svgFiles, use: [svgLoader] }] },
+      });
+      break;
+    }
+    case 'build-javascript':
+    {
+      actions.setWebpackConfig({
+        module: { rules: [{ test: svgFiles, use: [svgLoader] }] },
+      });
+      break;
+    }
     default:
-      {
-        return config;
-      }
+    {
+      break;
+    }
   }
 };

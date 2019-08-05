@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 
 import './_header.scss';
 

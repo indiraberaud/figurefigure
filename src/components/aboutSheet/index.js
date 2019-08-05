@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withPrefix } from 'gatsby-link';
 
 import './sheet.scss';
 

@@ -1,7 +1,5 @@
-/* global graphql */
-
+import { graphql, withPrefix } from 'gatsby';
 import React from 'react';
-import { withPrefix } from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Issue from '../components/issue';
 import Icon from '../components/icon';
@@ -71,7 +69,7 @@ class ArchivePage extends React.Component {
 export default ArchivePage;
 
 export const pageQuery = graphql`
-  query ArchiveQuery {
+  query {
     allDataJson {
       edges {
         node {

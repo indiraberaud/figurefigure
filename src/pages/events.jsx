@@ -1,7 +1,5 @@
-/* global graphql */
-
+import { graphql, withPrefix } from 'gatsby';
 import React from 'react';
-import { withPrefix } from 'gatsby-link';
 import Helmet from 'react-helmet';
 import { showDayDate } from '../components/utils';
 import './event.scss';
@@ -18,14 +16,6 @@ class EventsPage extends React.Component {
     });
     this.events = data.events.sort((a, b) => b.date - a.date);
     this.currentEvent = this.events.length ? this.events[this.events.length - 1] : undefined;
-  }
-
-  showEvent(event) {
-    this.scroll(event.ref);
-  }
-
-  scroll(ref) {
-    ref.current.scrollIntoView({ behavior: 'smooth' });
   }
 
   getImage(event) {
@@ -48,6 +38,14 @@ class EventsPage extends React.Component {
         </span>
       </li>
     );
+  }
+
+  scroll(ref) {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  showEvent(event) {
+    this.scroll(event.ref);
   }
 
   render() {
@@ -74,7 +72,7 @@ class EventsPage extends React.Component {
 export default EventsPage;
 
 export const pageQuery = graphql`
-  query EventQuery {
+  query {
     allDataJson {
       edges {
         node {
