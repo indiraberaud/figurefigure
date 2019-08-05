@@ -18,6 +18,9 @@ class HomepageIssue extends React.Component {
     return (
       <article className="vh-site issue--container">
         <a href={withPrefix(this.currentIssue.path)}>
+          <img className="issue--full-height" src={withPrefix(this.currentIssue.image_href)} alt={this.currentIssue.title} />
+        </a>
+        <a href={withPrefix(this.currentIssue.path)}>
           <img className="issue--full-height" src={withPrefix(this.currentIssue.bg_href)} alt={this.currentIssue.title} />
         </a>
       </article>

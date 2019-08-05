@@ -3,6 +3,7 @@
 .issue--container {
     text-align: center;
     line-height: $vh-site;
+    overflow-y: scroll;
 }
 
 .issue--full-height {
