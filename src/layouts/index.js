@@ -37,7 +37,6 @@ const TemplateWrapper = ({ children }) => (
       const { node } = data.allDataJson.edges[0];
       const { site } = node;
       const issues = node.issues.sort((a, b) => b.number - a.number);
-      console.log(node.issues, issues);
       const latestIssue = issues[0];
 
       return (
