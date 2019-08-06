@@ -34,7 +34,7 @@ const TemplateWrapper = ({ children }) => (
   <StaticQuery
     query={pageQuery}
     render={(data) => {
-      const node = data.allDataJson.edges[0].node;
+      const { node } = data.allDataJson.edges[0];
       const { site } = node;
       const issues = node.issues.sort((a, b) => b.number - a.number);
       console.log(node.issues, issues);
