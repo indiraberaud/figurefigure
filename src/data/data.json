@@ -145,7 +145,7 @@
             "title": "Conversation avec Mathilde Denize",
             "date_of_issue": "2019-05-01",
             "image_href": "/images/16.png",
-            "bg_href": "/images/16.jpg",
+            "bg_href": "/images/16_background.jpg",
             "archive_img": "/images/archives/16.jpeg",
             "path": "/pdf/FigureFigure16MathildeDenize.pdf"
         },
@@ -162,7 +162,7 @@
             "title": "Conversation avec Paul Gounon",
             "date_of_issue": "2019-07-01",
             "image_href": "/images/18.png",
-            "bg_href": "/images/18_background.jpeg",
+            "bg_href": "/images/18_background.jpg",
             "archive_img": "/images/archives/18.jpeg",
             "path": "/pdf/FigureFigure18PaulGounon.pdf"
         }
