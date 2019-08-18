@@ -165,6 +165,15 @@
             "bg_href": "/images/18_background.jpg",
             "archive_img": "/images/archives/18.jpeg",
             "path": "/pdf/FigureFigure18PaulGounon.pdf"
+        },
+        {
+            "number": 19,
+            "title": "Conversation avec Simon Brossard et Julie Villard",
+            "date_of_issue": "2019-08-01",
+            "image_href": "/images/19.png",
+            "bg_href": "/images/19_background.jpeg",
+            "archive_img": "/images/archives/19.jpeg",
+            "path": "/pdf/FigureFigure19SimonBrossard&JulieVillard.pdf"
         }
     ],
     "events": [
