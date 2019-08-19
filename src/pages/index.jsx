@@ -6,12 +6,12 @@ import HomepageIssue from '../components/homepage_issue';
 const PAGE_TITLE = 'Figure Figure';
 
 const IndexPage = ({ data }) => {
-  const items = data.allDataJson.edges[0].node.issues;
+  const issues = data.allDataJson.edges[0].node.issues.sort((a, b) => b.number - a.number);
 
   return (
     <main>
       <Helmet title={PAGE_TITLE} />
-      <HomepageIssue homepage issues={items} key="homepage issue" />
+      <HomepageIssue homepage issues={issues} key="homepage issue" />
     </main>
   );
 };
@@ -27,12 +27,6 @@ export const pageQuery = graphql`
             number
             title
             date_of_issue
-            pages {
-              prefix
-              sufix
-              first
-              count
-            }
             path
             bg_href
             image_href

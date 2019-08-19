@@ -10,28 +10,29 @@
 @font-face {
     font-family: 'Univers';
     font-style: normal;
-    font-weight: 200;
+    font-weight: 300;
     src:
         local('Univers'),
         url('./fonts/Univers-light-normal.ttf') format('truetype');
 }
 
+
 body {
-    font-family: 'Univers', sans-serif;
-    font-size: 20px;
-    color: $color_text;
-    font-weight: 200;
+    font-family: 'Univers', sans-serif !important;
+    //font-size: 20px !important;
+    color: $color_text !important;
+    //font-weight: 300 !important;
 }
 
 .font-secondary {
     font-size: 24px;
     font-family: 'Univers', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     text-transform: uppercase;
 }
 .font-tertiary {
     font-family: 'Univers', sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 .tt {

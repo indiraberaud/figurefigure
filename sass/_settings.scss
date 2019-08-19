@@ -4,4 +4,8 @@ $mq_tablet: "(min-width: 768px) and (max-width: 1024px)";
 $mq_phone: "(max-width: 767px)";
 $spacer: 0;
 $link-color: black;
+$vmargin-site: 82px;
 $vh-site: calc(100vh - 82px);
+$vh-site-half: calc((100vh - 82px)*.85);
+$vh-site-top: calc((100vh - 82px)*.15 - 50px);
+$carousel-control-color: black;

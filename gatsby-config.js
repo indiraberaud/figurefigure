@@ -1,5 +1,6 @@
 const pixrem = require('pixrem');
 const autoprefixer = require('autoprefixer');
+const path = require('path');
 
 module.exports = {
   siteMetadata: {
@@ -22,11 +23,13 @@ module.exports = {
       options: {
         postCssPlugins: [
           pixrem(),
-          autoprefixer({
-            browsers: ['last 2 versions'],
-          }),
+          autoprefixer(),
         ],
         precision: 8,
+        includePaths: [
+          `${__dirname}/node_modules`,
+          `${__dirname}/sass`,
+        ],
       },
     },
     {

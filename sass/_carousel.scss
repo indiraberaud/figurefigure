@@ -1,0 +1,120 @@
+@import 'settings';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
+
+$slick-transition-duration: .5s;
+$slick-margin: 100px;
+$slick-margin-sm: 50px;
+
+.sheet {
+    height: $vh-site;
+}
+
+.slick-slider {
+    background-color: #dddddd !important;
+    //height: $vh-site;
+    user-select: text;
+}
+
+.slick-track {
+    height: $vh-site;
+    user-select: text;
+}
+
+.slick-list {
+    height: $vh-site !important;
+}
+
+.slick-slide {
+    background-color: white;
+    opacity: 0.8;
+    filter: blur(4px);
+    transition: transform $slick-transition-duration,
+                opacity $slick-transition-duration,
+                margin $slick-transition-duration,
+                filter $slick-transition-duration;
+    z-index: -1;
+    position: relative;
+    cursor: pointer;
+    overflow-y: scroll;
+    //height: $slick-height;
+}
+
+.slick-slide.slick-active {
+    background-color: white;
+    transform: scale(1);
+    opacity: 1;
+    filter: none;
+    z-index: 0;
+    cursor: inherit;
+}
+
+.slick-list.draggable {
+    user-select: none;
+}
+
+.slick-slide:not(.slick-active) .sheet {
+    pointer-events: none;
+}
+
+@include media-breakpoint-up(md) {
+    .slick-track {
+        width: max-content !important;
+    }
+    .slick-slide {
+        transform: scale(0.85) translate3d(10%, 0, 0);
+    }
+    .slick-active + .slick-slide {
+        transform: scale(0.85) translate3d(-10%, 0, 0);
+    }
+    .slick-slide.slick-active:first-child {
+        margin-left: -$slick-margin;
+    }
+    .slick-slide:nth-last-child(2):not(.slick-active) {
+        margin-left: $slick-margin;
+    }    
+}
+
+@include media-breakpoint-down(sm) {
+    .sheet {
+        height: $vh-site-half;
+        display: block !important;
+    }
+    .slick-slide {
+        transform: scale(0.85) translate3d(0, 9%, 0);
+    }
+    .slick-active + .slick-slide {
+        transform: scale(0.85) translate3d(0, -9%, 0);
+    }
+    .slick-slide.slick-active:first-child {
+        margin-top: -$slick-margin-sm;
+    }
+    .slick-slide:nth-last-child(2):not(.slick-active) {
+        margin-top: $vh-site-top;
+    }
+}
+
+
+// Arrows
+/*
+.slick-prev  {
+    left: 180px;
+}
+
+.slick-next {
+    right: 180px;
+}
+
+.slick-prev, .slick-next { 
+    z-index: 1;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color: black !important;
+}
+
+.slick-prev.slick-disabled, .slick-next.slick-disabled {
+    display: none !important;
+}
+*/

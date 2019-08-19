@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './sheet.scss';
 
 const AboutSheet = ({ lines }) => (
-  <div className="sheet sheet-bg">
+  <div className="sheet-bg">
     {lines.map((line, i) => (
       <div className="sheet-line" key={i}>
         <span className="sheet-line__text" dangerouslySetInnerHTML={{ __html: line }} />

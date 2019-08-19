@@ -1,8 +1,12 @@
-.sheet {
-    margin: 0 18px;
-    padding: 0px 40px 50px;
+@import 'settings';
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins/_breakpoints";
 
+.sheet {
+    padding: 34px 40px 50px;
     box-sizing: border-box;
+    overflow-y: scroll;
 }
 
 .sheet_header {
@@ -11,7 +15,9 @@
 }
 
 .sheet-line {
-    padding: 8px 0;
+    padding-bottom: 32px;
+    font-size: 32px;
+    line-height: 1.25;
 }
 
 .sheet-line__number {
@@ -24,21 +30,34 @@
     padding-top: 24px;
     padding-bottom: 24px;
     text-align: center;
-    overflow-y: scroll;
+    //overflow-y: scroll;
 }
 
 .sheet-bg {
     background-repeat: repeat;
     background-size: cover;
+    margin-bottom: 32px;
 }
+
+
+@include media-breakpoint-down(sm) {
+    .sheet {
+        padding: 16px 20px 25px !important;
+    }
+    .sheet-line {
+        font-size: 24px;
+    }    
+}
+
 
 #mc_embed_signup {
     margin-bottom: 50px;
 }
 
 #mc_embed_signup_scroll {
-    margin: auto;
+    //margin: auto;
     text-align: left;
+    font-size: 24px;
 
     .d {
         position: absolute; left: -5000px;

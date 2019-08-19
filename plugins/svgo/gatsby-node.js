@@ -1,10 +1,16 @@
 'use strict';
+const path = require('path');
 
 exports.onCreateWebpackConfig = ({ stage, actions, loaders }) => {
   // const config = _ref.config, stage = _ref.stage;
 
   const svgFiles = /\.icon$/;
   const svgLoader = 'svg-sprite-loader';
+  actions.setWebpackConfig({
+    resolve: {
+      modules: [path.resolve(__dirname, 'src'), 'node_modules'],
+    },
+  });
 
   switch (stage) {
     case 'develop': {
