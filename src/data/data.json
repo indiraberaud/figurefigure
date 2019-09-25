@@ -193,6 +193,15 @@
             "bg_href": "/images/19_background.jpeg",
             "archive_img": "/images/archives/19.jpeg",
             "path": "/pdf/FigureFigure19SimonBrossard&JulieVillard.pdf"
+        },
+        {
+            "number": 20,
+            "title": "Conversation avec Antoine Donzeaud",
+            "date_of_issue": "2019-09-01",
+            "image_href": "/images/20.png",
+            "bg_href": "/images/20_background.jpeg",
+            "archive_img": "/images/archives/20.jpeg",
+            "path": "/pdf/FigureFigure20AntoineDonzeaud.pdf"
         }
     ],
     "events": [
