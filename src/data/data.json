@@ -202,6 +202,24 @@
             "bg_href": "/images/20_background.jpeg",
             "archive_img": "/images/archives/20.jpeg",
             "path": "/pdf/FigureFigure20AntoineDonzeaud.pdf"
+        },
+        {
+            "number": 21,
+            "title": "Conversation avec Jeanne Briand",
+            "date_of_issue": "2019-10-01",
+            "image_href": "/images/21.png",
+            "bg_href": "/images/21_background.jpeg",
+            "archive_img": "/images/archives/21.jpeg",
+            "path": "/pdf/FigureFigure21JeanneBriand.pdf"
+        },
+        {
+            "number": 22,
+            "title": "Conversation avec Hoël Duret",
+            "date_of_issue": "2019-11-01",
+            "image_href": "/images/22.png",
+            "bg_href": "/images/22_background.jpeg",
+            "archive_img": "/images/archives/22.jpeg",
+            "path": "/pdf/FigureFigure22HoëlDuret.pdf"
         }
     ],
     "events": [
