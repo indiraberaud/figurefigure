@@ -20,6 +20,12 @@
     line-height: 1.25;
 }
 
+.sheet-title {
+    font-size: 2em;
+    padding-bottom: 32px;
+    text-transform: uppercase;
+}
+
 .sheet-line__number {
     flex-wrap: nowrap;
     min-width: 2em;

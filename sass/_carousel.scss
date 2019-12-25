@@ -29,7 +29,7 @@ $slick-margin-sm: 50px;
 .slick-slide {
     background-color: white;
     opacity: 0.8;
-    filter: blur(4px);
+    filter: blur(3px);
     transition: transform $slick-transition-duration,
                 opacity $slick-transition-duration,
                 margin $slick-transition-duration,

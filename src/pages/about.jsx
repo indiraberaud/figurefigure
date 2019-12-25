@@ -52,9 +52,9 @@ const AboutPage = ({ data }) => {
               <div id="mc_embed_signup">
                 <form action="https://figurefigure.us20.list-manage.com/subscribe/post?u=0e476a01d6e5c29b2f4b5d9f3&amp;id=af50262d4a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate form-inline" target="_blank" noValidate>
                   <div id="mc_embed_signup_scroll">
-                    <p>NEWSLETTER</p>
+                    <p>newsletter</p>
                     <div className="input-group">
-                      <input type="email" name="EMAIL" className="email form-control" id="mce-EMAIL" placeholder="Addresse email" autoComplete="email" required />
+                      <input type="email" name="EMAIL" className="email form-control" id="mce-EMAIL" placeholder="email" autoComplete="email" required />
                       <div className="d" aria-hidden="true">
                         <input type="text" name="b_0e476a01d6e5c29b2f4b5d9f3_af50262d4a" tabIndex="-1" />
                       </div>
@@ -80,26 +80,31 @@ const AboutPage = ({ data }) => {
         </div>
 
         <div className="sheet sheet--contact sheet-bg">
-          {node.contact.map(element => (
-            <div key={element.title} className="contact-section">
-              <p className="contact-section__header">{element.title.toUpperCase()}</p>
-              <div className="contact-section__item">
-                {element.names
-                  ? element.names.map(name => (
-                    <span>
-                      {name}
-                      <br />
-                    </span>
-                  ))
-                  : element.name
+          <div className="row">
+            <div className="col-md-auto font-secondary sheet-title">Équipe</div>
+            <div className="col-md">
+              {node.contact.map(element => (
+                <div key={element.title} className="contact-section">
+                  <p className="contact-section__header">{element.title.toUpperCase()}</p>
+                  <div className="contact-section__item">
+                    {element.names
+                      ? element.names.map(name => (
+                        <span>
+                          {name}
+                          <br />
+                        </span>
+                      ))
+                      : element.name
+                      }
+                  </div>
+                  {element.email
+                    ? <a className="contact-section__item" href={`mailto:${element.email}`} target="_blank">{element.email}</a>
+                    : ''
                   }
-              </div>
-              {element.email
-                ? <a className="contact-section__item" href={`mailto:${element.email}`} target="_blank">{element.email}</a>
-                : ''
-              }
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
         </div>
       </Slider>
     </main>
